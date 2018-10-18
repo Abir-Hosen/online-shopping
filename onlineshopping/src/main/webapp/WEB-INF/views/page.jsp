@@ -29,9 +29,9 @@
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
 <!-- Bootstrap darkly theme CSS -->
- link href="${css}/bootstrep-darkly-theme.css" rel="stylesheet">
+<!-- <link href="${css}/bootstrep-darkly-theme.css" rel="stylesheet"> -->
 <!-- Bootstrap journal theme CSS -->
-<!-- <link href="${css}/bootstrep-journal-theme.css" rel="stylesheet"> -->
+<link href="${css}/bootstrep-journal-theme.css" rel="stylesheet">
 
 <!-- Custom styles for this template -->
 <link href="${css}/myapp.css" rel="stylesheet">
