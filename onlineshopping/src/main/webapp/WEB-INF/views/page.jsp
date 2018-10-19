@@ -45,7 +45,7 @@
 		<%@include file="./shared/navbar.jsp"%>
 
 		<!-- Page Content -->
-		
+
 		<div class="content">
 			<!-- Loading Home Content -->
 			<c:if test="${userClickHome == true}">
@@ -61,9 +61,15 @@
 			<c:if test="${userClickContact == true}">
 				<%@include file="contact.jsp"%>
 			</c:if>
+			
+			<!-- Loading content -->
+			<c:if test="${userClickAllProducts == true or userClickCategoryProducts == true}">
+				<%@include file="listProducts.jsp"%>
+			</c:if>
+			
 		</div>
-		
-		
+
+
 		<!-- Footer -->
 		<%@include file="./shared/footer.jsp"%>
 
@@ -71,7 +77,7 @@
 		<script src="${js}/jquery.js"></script>
 		<script src="${js}/bootstrap.min.js"></script>
 
-		<!-- Self coded javascript -->
+		<!-- Self coded java script -->
 		<script src="${js}/myapp.js"></script>
 
 	</div>
