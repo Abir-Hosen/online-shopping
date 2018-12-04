@@ -24,6 +24,7 @@
 
 <script>
 	window.menu = '${title}';
+	window.contextRoot='${contextRoot}';
 </script>
 
 <!-- Bootstrap core CSS -->
@@ -32,8 +33,10 @@
 <!-- <link href="${css}/bootstrep-darkly-theme.css" rel="stylesheet"> -->
 <!-- Bootstrap journal theme CSS -->
 <link href="${css}/bootstrep-journal-theme.css" rel="stylesheet">
-
+<!-- Data Tables -->
+<link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 <!-- Custom styles for this template -->
+
 <link href="${css}/myapp.css" rel="stylesheet">
 
 </head>
@@ -67,6 +70,11 @@
 				<%@include file="listProducts.jsp"%>
 			</c:if>
 			
+			<!-- Loading Single Product -->
+			<c:if test="${userClickShowProduct == true}">
+				<%@include file="singleProduct.jsp"%>
+			</c:if>
+			
 		</div>
 
 
@@ -76,7 +84,13 @@
 		<!-- Bootstrap core JavaScript -->
 		<script src="${js}/jquery.js"></script>
 		<script src="${js}/bootstrap.min.js"></script>
-
+		
+		<!-- Datatables plugins -->
+		<script src="${js}/jquery.dataTables.js"></script>
+		
+		<!-- Datatable BootStrep plugins -->
+		<script src="${js}/dataTables.bootstrap.js"></script>
+		
 		<!-- Self coded java script -->
 		<script src="${js}/myapp.js"></script>
 

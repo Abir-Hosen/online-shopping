@@ -11,7 +11,7 @@
    ">
 
 	<context:component-scan
-		base-package="net.abir.onlineshopping.controller" />
+		base-package="net.abir.onlineshopping" />
 	<context:component-scan
 		base-package="net.abir.shoppingbackend" />
 
