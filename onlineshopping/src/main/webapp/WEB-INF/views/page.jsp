@@ -20,6 +20,9 @@
 <meta name="description" content="">
 <meta name="author" content="">
 
+<meta name="_csrf" content="${_csrf.token}">
+<meta name="_csrf.header" content="${_csrf.headerName}">
+
 <title>Online Shopping ${title}</title>
 
 <script>
@@ -29,14 +32,12 @@
 
 <!-- Bootstrap core CSS -->
 <link href="${css}/bootstrap.min.css" rel="stylesheet">
-<!-- Bootstrap darkly theme CSS -->
-<!-- <link href="${css}/bootstrep-darkly-theme.css" rel="stylesheet"> -->
+
 <!-- Bootstrap journal theme CSS -->
 <link href="${css}/bootstrep-journal-theme.css" rel="stylesheet">
 <!-- Data Tables -->
 <link href="${css}/dataTables.bootstrap.css" rel="stylesheet">
 <!-- Custom styles for this template -->
-
 <link href="${css}/myapp.css" rel="stylesheet">
 
 </head>
@@ -75,6 +76,16 @@
 				<%@include file="singleProduct.jsp"%>
 			</c:if>
 			
+			<!-- Loading Manage Product -->
+			<c:if test="${userClickManageProducts == true}">
+				<%@include file="manageProducts.jsp"%>
+			</c:if>
+			
+			<!-- Loading cart Product -->
+			<c:if test="${userClickShowCart == true}">
+				<%@include file="cart.jsp"%>
+			</c:if>
+			
 		</div>
 
 
@@ -83,6 +94,8 @@
 
 		<!-- Bootstrap core JavaScript -->
 		<script src="${js}/jquery.js"></script>
+		<!-- JQuery validation -->
+		<script src="${js}/jquery.validate.js"></script>
 		<script src="${js}/bootstrap.min.js"></script>
 		
 		<!-- Datatables plugins -->
@@ -90,6 +103,9 @@
 		
 		<!-- Datatable BootStrep plugins -->
 		<script src="${js}/dataTables.bootstrap.js"></script>
+		
+		<!-- Datatable BootBox plugins -->
+		<script src="${js}/bootbox.min.js"></script>
 		
 		<!-- Self coded java script -->
 		<script src="${js}/myapp.js"></script>

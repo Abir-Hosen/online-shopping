@@ -27,7 +27,6 @@
 <!-- Custom CSS -->
 <link href="${css}/myapp.css" rel="stylesheet">
 
-
 <title>Online Shopping - ${title}</title>
 
 </head>

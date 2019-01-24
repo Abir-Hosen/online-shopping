@@ -25,7 +25,7 @@ public class HibernateConfig {
 	private final static String DATABASE_PASSWORD="";
 	
 	//Data source will be available in here
-	@Bean
+	@Bean("dataSource")
 	public DataSource getDataSource() {
 		BasicDataSource dataSource = new BasicDataSource();
 		
@@ -55,6 +55,8 @@ public class HibernateConfig {
 		properties.put("hibernate.dialect", DATABASE_DIALECT);
 		properties.put("hibernate.show_sql", "true");
 		properties.put("hibernate.formate_sql", "true");
+		
+		properties.put("hibernate.hbm2ddl.auto", "update");
 		
 		return properties;
 	}
